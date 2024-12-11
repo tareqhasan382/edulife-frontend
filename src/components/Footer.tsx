@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className=" lg:px-28 px-2 w-full h-auto  bg-gray-300 pt-20 ">
-      <div className="w-full h-auto grid lg:grid-cols-5 grid-cols-1 items-center justify-start">
+    <footer className=" lg:px-28 px-2 w-full h-auto bg-[#FDF8EE] pt-20 ">
+      <div className="w-full h-auto grid lg:grid-cols-5 lg:landscape:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 sm:landscape:grid-cols-2 items-center justify-start">
         <div className="h-full w-full flex flex-col gap-3 ">
           <h1 className=" font-bold text-4xl ">Edulife</h1>
           <p>
@@ -33,13 +33,13 @@ const Footer = () => {
           <h1 className=" font-bold text-2xl pb-3 ">Contac Info</h1>
           <a
             href="tel:+8801989342794"
-            className="hover:text-[#00B5E2] inline-block "
+            className="hover:text-[#4D2C5E] inline-block "
           >
             +880 1989-342794
           </a>
           <a
             href="mailto:tareqhasan382@gmail.com"
-            className="hover:text-[#00B5E2] "
+            className="hover:text-[#4D2C5E] "
           >
             tareqhasan382@gmail.com
           </a>
