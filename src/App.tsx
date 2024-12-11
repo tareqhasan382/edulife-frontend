@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className=" w-full h-[800px] bg-blue-300 ">
+    <div className=" w-full h-[800px] bg-[#FDF8EE] ">
       <h1 className=" font-bold text-4xl ">Hello World</h1>
     </div>
   );
