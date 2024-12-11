@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import test from "../src/assets/online-test 1.png";
 import exam from "../src/assets/exam 1.png";
 import certificate from "../src/assets/certification 1.png";
+import Lesson from "./components/Lesson";
 function App() {
   // flex flex-col items-center justify-center
   return (
@@ -94,7 +95,8 @@ function App() {
           </div>
         </div>
       </div>
-
+      {/* ===============Lessson================= */}
+      <Lesson />
       {/* ============buttom banner============ */}
       <div className=" lg:px-28 px-2 py-10 w-full h-auto bg-white flex flex-col items-center ">
         <div className=" bg-[#4D2C5E] text-white w-[80%] lg:h-[277px] h-auto rounded-2xl flex flex-col items-center justify-center p-5 gap-5 ">

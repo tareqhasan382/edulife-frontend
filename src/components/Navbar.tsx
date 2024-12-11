@@ -24,12 +24,17 @@ const Navbar = () => {
             <Link to="/">About</Link>
           </li>
           <li>
-            <Link to="/">Lesson</Link>
+            <Link to="/lesson">Lesson</Link>
+          </li>
+          <li>
+            <Link to="/tutorial">Tutorial</Link>
           </li>
         </ul>
-        <button className="max-md:hidden bg-[#4D2C5E] px-5 py-2 rounded-full text-white ">
-          Sign in
-        </button>
+        <Link to="/sign-in">
+          <button className="max-md:hidden bg-[#4D2C5E] px-5 py-2 rounded-full text-white ">
+            Sign in
+          </button>
+        </Link>
         <div className=" lg:hidden flex gap-4 items-center">
           {/* <ThemeToggle /> */}
           <span className="md:hidden overflow-hidden  pr-3">
