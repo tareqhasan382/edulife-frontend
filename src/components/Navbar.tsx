@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
+import { useAppDispatch, useAppSelector } from "../Redux/hooks";
+import { RootState } from "../Redux/store";
+import { userLoggedOut } from "../Redux/auth/authSlice";
 // import logo from "../assets/Edulife.png";
 const Navbar = () => {
+  const dispatch = useAppDispatch();
+  const auth = useAppSelector((state: RootState) => state.auth);
   const [showNav, setShowNav] = useState<boolean>(false);
   // const [activeMenu, setActiveMenu] = useState<string>("home");
   // const location = useLocation();
@@ -30,11 +35,21 @@ const Navbar = () => {
             <Link to="/tutorial">Tutorial</Link>
           </li>
         </ul>
-        <Link to="/sign-in">
-          <button className="max-md:hidden bg-[#4D2C5E] px-5 py-2 rounded-full text-white ">
-            Sign in
+        {auth?.user ? (
+          <button
+            onClick={() => dispatch(userLoggedOut())}
+            className="max-md:hidden bg-[#4D2C5E] px-5 py-2 rounded-full text-white "
+          >
+            Sign Out
           </button>
-        </Link>
+        ) : (
+          <Link to="/sign-in">
+            <button className="max-md:hidden bg-[#4D2C5E] px-5 py-2 rounded-full text-white ">
+              Sign in
+            </button>
+          </Link>
+        )}
+
         <div className=" lg:hidden flex gap-4 items-center">
           {/* <ThemeToggle /> */}
           <span className="md:hidden overflow-hidden  pr-3">

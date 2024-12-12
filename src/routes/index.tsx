@@ -7,6 +7,7 @@ import Tutorial from "../components/Tutorial";
 import SignUp from "../components/SignUp";
 import SignIn from "../components/SignIn";
 import ProtectedRoute from "../components/ProtectedRoute";
+import Vocabulary from "../components/Vocabulary";
 
 const routes = createBrowserRouter([
   {
@@ -26,6 +27,14 @@ const routes = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Lesson />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/vocabulary/:lessonNo",
+        element: (
+          <ProtectedRoute>
+            <Vocabulary />
           </ProtectedRoute>
         ),
       },

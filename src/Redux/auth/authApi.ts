@@ -5,7 +5,7 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     signup: builder.mutation({
       query: (data) => ({
-        url: "/auth/signup",
+        url: "/auth/registration",
         method: "POST",
         body: data,
       }),
@@ -20,7 +20,7 @@ export const authApi = baseApi.injectEndpoints({
         try {
           const result = await queryFulfilled;
           // console.log("queryFulfilled result:",result.data.token)
-          const user = jwtDecode(result?.data?.token);
+          const user = jwtDecode(result?.data?.data?.accessToken);
           // console.log("user token:",user)
           // localStorage.setItem(
           //   "womensAuth",
@@ -32,7 +32,7 @@ export const authApi = baseApi.injectEndpoints({
 
           dispatch(
             userLoggedIn({
-              accessToken: result?.data?.token,
+              accessToken: result?.data?.data?.accessToken,
               user: user,
             })
           );

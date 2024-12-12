@@ -9,7 +9,7 @@ const Layout = () => {
         <Navbar />
       </div>
 
-      <div className="mx-auto pt-[90px] bg-[#FDF8EE]">
+      <div className="mx-auto w-full h-full pt-[90px] bg-[#FDF8EE]">
         <Outlet></Outlet>
       </div>
       <Footer />
