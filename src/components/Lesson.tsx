@@ -19,7 +19,7 @@ const Lesson: React.FC = () => {
   return (
     <div className=" lg:px-28 px-2 py-10 w-full h-full bg-white flex flex-col items-center">
       <h1 className=" lg:text-4xl text-2xl font-bold py-6 ">Lessons</h1>
-      <div className=" w-full h-auto grid grid-cols-5  gap-6 items-center ">
+      <div className=" w-full h-auto grid lg:landscape:grid-cols-5 lg:grid-cols-4 md:landscape:grid-cols-3 md:grid-cols-3 sm:landscape:grid-cols-2 sm:grid-cols-1  gap-6 items-center ">
         {data?.data &&
           data?.data.map((lesson) => (
             <Link to={`/vocabulary/${lesson.number}`} key={lesson._id}>

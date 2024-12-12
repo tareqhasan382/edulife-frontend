@@ -39,7 +39,7 @@ const routes = createBrowserRouter([
         ),
       },
       {
-        path: "/tutorila",
+        path: "/tutorial",
         element: (
           <ProtectedRoute>
             <Tutorial />
